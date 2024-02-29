@@ -76,3 +76,21 @@ For those interested, we also present additional results of the QT approach appl
     * Parameter reduction
     * Practical in real world
     * No need quantum computers for inference
+ 
+## Citation
+
+This project is based on and has been advanced beyond the work described in the paper:  
+* [Training Classical Neural Networks by Quantum Machine Learning](https://arxiv.org/abs/2402.16465)  
+***Chen-Yu Liu***, En-Jui Kuo, Chu-Hsuan Abraham Lin, Sean Chen, Jason Gemsun Young, Yeong-Jar Chang, Min-Hsiu Hsieh  
+arXiv preprint, arXiv: 2402.16465 (2024)
+
+```
+@misc{liu2024training,
+      title={Training Classical Neural Networks by Quantum Machine Learning}, 
+      author={Chen-Yu Liu and En-Jui Kuo and Chu-Hsuan Abraham Lin and Sean Chen and Jason Gemsun Young and Yeong-Jar Chang and Min-Hsiu Hsieh},
+      year={2024},
+      eprint={2402.16465},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph}
+}
+```
