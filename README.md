@@ -76,7 +76,16 @@ For those interested, we also present additional results of the QT approach appl
     * Parameter reduction
     * Practical in real world
     * No need quantum computers for inference
- 
+
+## Installation
+```bash
+conda create --name tqtest python=3.9
+pip Install qiskit==0.45.0 qiskit_ibm_runtime==0.16.0 qiskit-qer==0.13.0
+git clone https://github.com/mit-han-lab/torchquantum.git
+cd torchquantum
+pip install --editable .
+```
+
 ## Citation
 
 This project is based on and has been advanced beyond the work described in the paper:  
