@@ -16,13 +16,13 @@ We provide the examples of using QT on the VGG-like CNN on MNIST dataset, Fashio
 
 Besides the PolyLog reduction behavior of the proposed approach, one may also observe that we are tackling three of the main challenges in the QCML domain.
 
-* The data embedding issue is resolved: 
+* ***The data embedding issue is resolved***: 
 Firstly, since we are essentially generating classical NN weights through a QNN, the input and output of the ML model are entirely classical. As such, we don't have to worry about the data embedding issues associated with QNNs (for example, the need for data-loading QNN layers that impose constraints on input data size or require data compression).
 
-* Inference without quantum computers:
+* ***Inference without quantum computers***:
 The trained model is compatible with classical hardware. In fact, model inference relies solely on classical computers, enhancing its practicality, especially given the limited availability of quantum computers compared to classical ones. However, it's important to remember that we still benefit from quantum computing for its PolyLog reduction in the training process, which stems from the exponentially large Hilbert space.
 
-* General approach for QCML, QML, and ML:
+* ***General approach for QCML, QML, and ML***:
 Although our example in the QHack 2024 is the application to the quantum many-body physics, the proposed approach in Fig. nv. 1 is actually a general training flow for ANY QCML, QML, and ML use case, with PolyLog parameter reduction behavior. In the future, we would also like to tackle larger ML model that the parameter reduction will make the applicability totally different.  
 
 ## CUDA Quantum and NVIDIA GPUs. 
