@@ -46,6 +46,7 @@ git clone https://github.com/mit-han-lab/torchquantum.git
 cd torchquantum
 pip install --editable .
 ```
+We use the [TorchQuantum](https://github.com/mit-han-lab/torchquantum/tree/main) as the computational backend of QT.
 
 ## Papers using Quantum-Train Toolkit
 
