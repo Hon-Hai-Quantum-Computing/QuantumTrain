@@ -1,17 +1,10 @@
 
-# < QHack 2024 | A Matter of Taste Challenge >  
-<!-- ###  Building a phase identification classifier of the quantum many-body system.  -->
-
-### *Quantum-Train*: Rethinking Hybrid Quantum-Classical Machine Learning in the Model Compression Perspective
-
-<img src="images/banner.png" width="800px" align="center">
-
-## HHRI TeamQC 
-Member : [Chen-Yu Liu](https://cylphysics.github.io/about/), Ya-Chi Lu, Chu-Hsuan Lin, Frank Chen
+# Quantum-Train Toolkit
+### *Reducing the training parameters in Classical ML model by Quantum Machine Learning*
 
 
 ## Project description 
-In this Hackathon project, we propose a new perspective on hybrid quantum-classical machine learning (QCML) that involves training classical neural networks (NNs) by mapping $M$ classical NN weights into an $\lceil \log_2 M \rceil$-qubit parameterized quantum state with  $2^{\lceil \log_2 M \rceil} \sim M$ amplitudes. Assuming that our parameterized quantum state, or quantum neural network (QNN), has a polynomial number of layers, the action of tuning this QNN with $\text{PolyLog}(M)$ parameters effectively tunes a classical NN with $M$ parameters. 
+In this project, we propose a new perspective on hybrid quantum-classical machine learning (QCML) that involves training classical neural networks (NNs) by mapping $M$ classical NN weights into an $\lceil \log_2 M \rceil$-qubit parameterized quantum state with  $2^{\lceil \log_2 M \rceil} \sim M$ amplitudes. Assuming that our parameterized quantum state, or quantum neural network (QNN), has a polynomial number of layers, the action of tuning this QNN with $\text{PolyLog}(M)$ parameters effectively tunes a classical NN with $M$ parameters. 
 
 In practice, more specifically, we need an additional mapping model (which also has  parameters) to map the probability outputs to NN weights. That is, we could train the same classical NN with a PolyLog parameter reduction. As shown in below : 
 
@@ -19,28 +12,18 @@ In practice, more specifically, we need an additional mapping model (which also 
 
 Next, we apply the QT flow described above to the phase identification problem in quantum many-body physics (A Matter of Taste challenge). Using the quantum dataset provided by PennyLane, we train a classifier that, given the classical shadow measurement result and the corresponding basis information, outputs the label of the phase, as shown in
 
-<img src="images/phase_classifier.png" width="800px" align="center">
 
-For the example of the Transverse Field Ising Model (TFIM), data with $h<1$ are labeled as the ferromagnetic (order) phase, while data with $h>1$ are labeled as the disordered phase, since the strength of the transverse field  is larger than the coupling  in such case.
-
-<img src="images/phase_diagram.png" width="800px" align="center">
-
-
-In this repository, we provide the source code for implementing Quantum-Train with an application to the Quantum Phase Identification problem. The workflow includes constructing training and testing data from the PennyLane quantum dataset, building a phase identification classifier, and then employing the QT technique to train the same classical model using QNN and a mapping model with a polylogarithmic reduction in parameters. An example of this process for the TFIM is demonstrated in the `Quantum_Train_TFIM_1x16_L16_torchquantum.ipynb` Jupyter notebook. The corresponding conda environment can be found in `torchquantum_environment.yml`. Please note that every result presented in this project can be reproduced by simply modifying certain parameters in `Quantum_Train_TFIM_1x16_L16_torchquantum.ipynb`. Thanks to the NVIDIA Power-Up, A general classifier that allow all 1x4, 1x8, and 1x16 layouts is presented in `Quantum_Train_TFIM_General_classifier_L16_torchquantum.ipynb`.
-
-Additionally, for those interested in a PennyLane version of QT, it is available in `Quantum_Train_TFIM_1x16_L16_pennylane.ipynb`, where Lightning.gpu is built on cuQuantum. It's worth noting that this version may not be as stable as the TorchQuantum version. The corresponding PennyLane environment is specified in `pennylane_environment.yml`.
-
-## Why it is interesting.
+## Why it is interesting
 
 Besides the PolyLog reduction behavior of the proposed approach, one may also observe that we are tackling three of the main challenges in the QCML domain.
 
-### The data embedding issue is resolved: 
+* The data embedding issue is resolved: 
 Firstly, since we are essentially generating classical NN weights through a QNN, the input and output of the ML model are entirely classical. As such, we don't have to worry about the data embedding issues associated with QNNs (for example, the need for data-loading QNN layers that impose constraints on input data size or require data compression).
 
-### Inference without quantum computers:
+* Inference without quantum computers:
 The trained model is compatible with classical hardware. In fact, model inference relies solely on classical computers, enhancing its practicality, especially given the limited availability of quantum computers compared to classical ones. However, it's important to remember that we still benefit from quantum computing for its PolyLog reduction in the training process, which stems from the exponentially large Hilbert space.
 
-### General approach for QCML, QML, and ML:
+* General approach for QCML, QML, and ML:
 Although our example in the QHack 2024 is the application to the quantum many-body physics, the proposed approach in Fig. nv. 1 is actually a general training flow for ANY QCML, QML, and ML use case, with PolyLog parameter reduction behavior. In the future, we would also like to tackle larger ML model that the parameter reduction will make the applicability totally different.  
 
 ## CUDA Quantum and NVIDIA GPUs. 
