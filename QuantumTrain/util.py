@@ -122,15 +122,14 @@ def network_config_extract(model):
 
 # Quantum training class
 class QuantumTrain(nn.Module):
-    def __init__(self, model, n_qubit, nw_list_normal, q_depth, device, network_config):
+    def __init__(self, model, q_depth, device):
         super().__init__()
         self.model          = model 
-        self.n_qubit        = n_qubit 
-        self.nw_list_normal = nw_list_normal
         self.q_depth        = q_depth 
         self.device         = device
-        self.network_config = network_config
-        
+        self.network_config = network_config_extract(model)
+        self.n_qubit, self.nw_list_normal = required_qubits_estimation(model)
+
         # Initialize mapping network and quantum neural network layers
         self.MappingNetwork = self.MappingModel(self.n_qubit+1, [4, 20, 4], 1).to(device)  
         self.QuantumNN = self.QLayer(self.q_depth, self.nw_list_normal, self.n_qubit).to(self.device) 
