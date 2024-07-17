@@ -48,15 +48,21 @@ pip install --editable .
 ```
 We use the [TorchQuantum](https://github.com/mit-han-lab/torchquantum/tree/main) as the computational backend of QT.
 
-## Papers using Quantum-Train Toolkit
+## Papers and projects using Quantum-Train Toolkit
+
+* [Quantum-Train Long Short-Term Memory: Application on Flood Prediction Problem](https://arxiv.org/abs/2407.08617)  
+Chu-Hsuan Abraham Lin, ***Chen-Yu Liu***, Kuan-Cheng Chen  
+arXiv preprint, arXiv: 2407.08617 (2024)  
+[🥈[Second Place Prize](https://app.ekipa.de/challenges/deloitte-quantum-24/brief) (<sub><sup>Linkedin Post [post](https://www.linkedin.com/feed/update/urn:li:activity:7199395343703138304/)</sup></sub>), Deloitte's Quantum Climate Challenge 2024 ]
 
 * [QTRL: Toward Practical Quantum Reinforcement Learning via Quantum-Train](https://arxiv.org/abs/2407.06103)  
-***Chen-Yu Liu***, Chu-Hsuan Abraham Lin, Chao-Han Huck Yang, Kuan-Cheng Chen, Min-Hsiu Hsieh  
+***Chen-Yu Liu***, Chu-Hsuan Abraham Lin, Chao-Han Huck Yang, Kuan-Cheng Chen, Min-Hsiu Hsieh   
 arXiv preprint, arXiv: 2407.06103 (2024)  
 
 * [Quantum-Train: Rethinking Hybrid Quantum-Classical Machine Learning in the Model Compression Perspective](https://arxiv.org/abs/2405.11304)  
-***Chen-Yu Liu***, En-Jui Kuo, Chu-Hsuan Abraham Lin, Jason Gemsun Young, Yeong-Jar Chang, Min-Hsiu Hsieh, Hsi-Sheng Goan  
-arXiv preprint, arXiv: 2405.11304 (2024)
+***Chen-Yu Liu***, En-Jui Kuo, Chu-Hsuan Abraham Lin, Jason Gemsun Young, Yeong-Jar Chang, Min-Hsiu Hsieh, Hsi-Sheng Goan    
+arXiv preprint, arXiv: 2405.11304 (2024)  
+[🥈[Second Place Prize](https://pennylane.ai/blog/2024/03/qhack-2024-highlights/#top-teams-and-projects), A Matter of  Taste Challenge,   QHack 2024 Open Hackathon]
 
 * [Training Classical Neural Networks by Quantum Machine Learning](https://arxiv.org/abs/2402.16465)  
 ***Chen-Yu Liu***, En-Jui Kuo, Chu-Hsuan Abraham Lin, Sean Chen, Jason Gemsun Young, Yeong-Jar Chang, Min-Hsiu Hsieh  
