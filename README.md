@@ -41,7 +41,7 @@ The use of NVIDIA GPUs led to a training speedup of up to 3.28X for the QT model
 ## Installation
 ```bash
 conda create --name tqtest python=3.9
-pip Install qiskit==0.45.0 qiskit_ibm_runtime==0.16.0 qiskit-qer==0.13.0
+pip install qiskit==0.45.0 qiskit_ibm_runtime==0.16.0 qiskit-aer==0.13.0
 git clone https://github.com/mit-han-lab/torchquantum.git
 cd torchquantum
 pip install --editable .
