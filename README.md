@@ -37,8 +37,8 @@ The use of NVIDIA GPUs led to a training speedup of up to 3.28X for the QT model
 <img src="images/result_1.png" width="800px" align="center">
 <img src="images/result_group3.png" width="800px" align="center">
 
-
-## Installation
+## Usage
+### 1. Installation of computational backend
 ```bash
 conda create --name tqtest python=3.9
 pip install qiskit==0.45.0 qiskit_ibm_runtime==0.16.0 qiskit-aer==0.13.0
@@ -47,6 +47,11 @@ cd torchquantum
 pip install --editable .
 ```
 We use the [TorchQuantum](https://github.com/mit-han-lab/torchquantum/tree/main) as the computational backend of QT.
+### 2. Download QuantumTrain Toolkit
+```bash
+git clone https://github.com/Hon-Hai-Quantum-Computing/QuantumTrain.git
+```
+### 3. Enjoy the exploration ! 
 
 ## Papers and projects using Quantum-Train Toolkit
 ### Paper
