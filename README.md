@@ -57,11 +57,11 @@ git clone https://github.com/Hon-Hai-Quantum-Computing/QuantumTrain.git
 ### Paper
 * [Quantum-Train Long Short-Term Memory: Application on Flood Prediction Problem](https://arxiv.org/abs/2407.08617)  
 Chu-Hsuan Abraham Lin, ***Chen-Yu Liu***, Kuan-Cheng Chen  
-arXiv preprint, arXiv: 2407.08617 (2024)  
+IEEE International Conference on Quantum Computing and Engineering (QCE) (2024)
 
 * [QTRL: Toward Practical Quantum Reinforcement Learning via Quantum-Train](https://arxiv.org/abs/2407.06103)  
 ***Chen-Yu Liu***, Chu-Hsuan Abraham Lin, Chao-Han Huck Yang, Kuan-Cheng Chen, Min-Hsiu Hsieh   
-arXiv preprint, arXiv: 2407.06103 (2024)  
+IEEE International Conference on Quantum Computing and Engineering (QCE) (2024)
 
 * [Quantum-Train: Rethinking Hybrid Quantum-Classical Machine Learning in the Model Compression Perspective](https://arxiv.org/abs/2405.11304)  
 ***Chen-Yu Liu***, En-Jui Kuo, Chu-Hsuan Abraham Lin, Jason Gemsun Young, Yeong-Jar Chang, Min-Hsiu Hsieh, Hsi-Sheng Goan    
